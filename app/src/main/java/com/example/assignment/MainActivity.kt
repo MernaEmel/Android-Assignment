@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         btnFilter = findViewById(R.id.Filter)
         btnShowAll = findViewById(R.id.showAll)
         listView = findViewById(R.id.activityList)
-
+        selectedDate = sdf.format(Date())
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val sys = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        selectedDate = sdf.format(Date())
+
 
 
         calendarView.setOnDateChangeListener { _, year, month, day ->

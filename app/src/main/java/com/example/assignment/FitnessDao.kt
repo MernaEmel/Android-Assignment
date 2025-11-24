@@ -12,7 +12,7 @@ interface FitnessDao {
     @Query("SELECT * FROM fitness")
     suspend fun getAllActivities():List<Fitness>
 
-    @Query("SELECT * FROM fitness WHERE date=:selecteDate")
+    @Query("SELECT * FROM fitness WHERE date=:selectedDate")
     suspend fun getActivityByDate(selectedDate:String):List<Fitness>
 
     @Query("SELECT SUM(duration) FROM fitness WHERE date=:selectedDate")
